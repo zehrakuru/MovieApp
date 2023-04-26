@@ -22,7 +22,7 @@ class NetworkModule {
     fun provideRetrofit(okHttp: OkHttpClient): Retrofit {
         return Retrofit.Builder().apply {
             client(okHttp)
-            baseUrl(Constant.BASE_URL)
+            baseUrl(BuildConfig.BASE_URL)
             addConverterFactory(MoshiConverterFactory.create())
         }.build()
     }
