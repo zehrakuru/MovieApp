@@ -2,7 +2,7 @@ package com.example.movieapp.data.web.repository
 
 import com.example.movieapp.data.web.model.MovieListResponse
 import com.example.movieapp.data.web.service.MovieListServices
-import com.example.movieapp.domain.MovieListNetworkRepository
+import com.example.movieapp.domain.repository.MovieListNetworkRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject

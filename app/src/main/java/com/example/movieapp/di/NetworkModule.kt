@@ -3,6 +3,7 @@ package com.example.movieapp.di
 import android.util.Log
 import com.example.movieapp.BuildConfig
 import com.example.movieapp.Utils.Constant
+import com.example.movieapp.data.web.service.MovieListServices
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -46,5 +47,10 @@ class NetworkModule {
                 addInterceptor(interceptor)
             }
         }.build()
+    }
+    @Singleton
+    @Provides
+    fun provideMovieListServices(retrofit: Retrofit): MovieListServices {
+        return retrofit.create(MovieListServices::class.java)
     }
 }

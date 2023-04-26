@@ -1,7 +1,7 @@
 package com.example.movieapp.di
 
 import com.example.movieapp.data.web.repository.MovieListNetworkRepositoryImpl
-import com.example.movieapp.domain.MovieListNetworkRepository
+import com.example.movieapp.domain.repository.MovieListNetworkRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
