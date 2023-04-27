@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.movieapp.R
-import com.example.movieapp.Utils.Constant
+import com.example.movieapp.utils.Constant
 import com.example.movieapp.data.web.model.MovieListResponse
 import kotlinx.android.synthetic.main.movie_item_design.view.*
 

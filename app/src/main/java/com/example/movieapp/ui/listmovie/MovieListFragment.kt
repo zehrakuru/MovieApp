@@ -1,13 +1,9 @@
 package com.example.movieapp.ui.listmovie
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
-import com.example.movieapp.R
+import androidx.navigation.fragment.findNavController
 import com.example.movieapp.base.BaseFragment
 import com.example.movieapp.data.web.model.MovieListResponse
 import com.example.movieapp.databinding.FragmentMovieListBinding
@@ -22,6 +18,10 @@ class MovieListFragment :
 
     private fun setupAdapter() {
         binding.onBoardCardView.adapter = movieListAdapter
+        movieListAdapter.setOnItemClickListener {
+            val navigation = MovieListFragmentDirections.actionMovieListFragmentToMovieDetailsFragment()
+            findNavController().navigate(navigation)
+        }
     }
 
     private val movieListAdapter by lazy {
@@ -30,7 +30,6 @@ class MovieListFragment :
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onClick(p0: View?) {

@@ -8,7 +8,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
-import com.example.movieapp.Utils.ConnectionLiveData
+import com.example.movieapp.utils.ConnectionLiveData
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collectLatest
 
@@ -87,7 +87,7 @@ abstract class BaseActivity <VB : ViewBinding, VM : ViewModel>(
     }
     //endregion handle state
 
-    /* Memory leaky i engellemek için destory durumunda _binding sıfırlanmalıdır. */
+    /* Memory leaky i engellemek için destroy durumunda _binding sıfırlanmalıdır. */
     override fun onDestroy() {
         super.onDestroy()
         _binding = null

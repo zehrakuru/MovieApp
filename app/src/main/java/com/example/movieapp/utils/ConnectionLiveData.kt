@@ -1,4 +1,4 @@
-package com.example.movieapp.Utils
+package com.example.movieapp.utils
 
 import android.content.BroadcastReceiver
 import android.content.Context

@@ -20,7 +20,6 @@ class MovieListViewModel @Inject constructor(
     private val listMutableLiveData = MutableLiveData<UseCaseState<MovieListResponse>>()
     val listLiveData: LiveData<UseCaseState<MovieListResponse>> get() = listMutableLiveData
 
-
     fun getMovieListUseCaseState(){
         viewModelScope.launch {
             getMovieListUseCase.invoke().collect{
@@ -28,7 +27,7 @@ class MovieListViewModel @Inject constructor(
                     is UseCaseState.Error -> {
                         Log.i(it.message,"")
                     }
-                    is UseCaseState.Success->{
+                    is UseCaseState.Success-> {
                         Log.i(it.message,"")
                         listMutableLiveData.value = it
                     }

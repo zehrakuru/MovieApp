@@ -1,4 +1,4 @@
-package com.example.movieapp.Utils
+package com.example.movieapp.utils
 
 enum class ConnectionStates {
     Available, Unavailable, Bad, AirPlaneMode
