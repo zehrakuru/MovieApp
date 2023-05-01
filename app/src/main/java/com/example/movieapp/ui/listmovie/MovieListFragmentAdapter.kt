@@ -47,9 +47,11 @@ class MovieListFragmentAdapter: RecyclerView.Adapter<MovieListFragmentAdapter.Mo
         val listItem = differ.currentList[position]
         holder.itemView.apply {
             tvMovieName.text= listItem.title
-            //voteTextView.text= listItem.voteAverage.toString()
+            tvLang.text = listItem.originalLanguage
+            tvRate.text = listItem.voteAverage.toString()
+            tvMovieDateRelease.text = listItem.releaseDate
             Glide.with(this)
-                .apply { RequestOptions().override(120, 120).fitCenter() }
+                .apply { RequestOptions().override(115, 160).fitCenter() }
                 .load(Constant.POSTER_BASE_URL+listItem.backdropPath)
                 .into(ImgMovie)
             rootView.setOnClickListener {

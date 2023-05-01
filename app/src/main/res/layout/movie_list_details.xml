@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Space_Cadet">
+    android:background="@color/md_theme_dark_error">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/imgLayout"
@@ -96,9 +96,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="Movie Info :"
+                    android:text="Movie Info"
                     android:textColor="@color/Sandy_Tan"
-                    android:textSize="16dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvMovieTagLine" />
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="ReleaseDate: "
+                    android:text="Release Date: "
                     android:textColor="@color/Sandy_Tan"
                     android:textSize="14dp"
                     android:textStyle="bold"
@@ -116,7 +116,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/tvMovieInfo" />
 
                 <TextView
-                    android:id="@+id/tvMovieDateRelease"
+                    android:id="@+id/tvMovieDateReleaseAnswer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2019"
@@ -208,7 +208,7 @@
                     android:layout_marginBottom="2dp"
                     android:text="130,000"
                     android:textColor="@color/Sandy_Tan"
-                    android:textSize="12sp"
+                    android:textSize="14sp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/tvMovieRevenueTitle"
                     app:layout_constraintStart_toEndOf="@+id/tvMovieRevenueTitle" />
 
@@ -217,9 +217,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Overview :"
+                    android:text="Overview"
                     android:textColor="@color/Sandy_Tan"
-                    android:textSize="14dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvMovieRevenueTitle" />

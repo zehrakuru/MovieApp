@@ -19,7 +19,7 @@ class MovieListFragment :
     private fun setupAdapter() {
         binding.onBoardCardView.adapter = movieListAdapter
         movieListAdapter.setOnItemClickListener {
-            val navigation = MovieListFragmentDirections.actionMovieListFragmentToMovieDetailsFragment()
+            val navigation = MovieListFragmentDirections.actionMovieListFragmentToMovieDetailsFragment(it.toInt())
             findNavController().navigate(navigation)
         }
     }

@@ -16,15 +16,15 @@ import javax.inject.Inject
 class MovieDetailsViewModel  @Inject constructor(
     private val getMovieDetailsUseCase: GetMovieDetailsUseCase
 ) : ViewModel() {
-    private val listDetailsMutableLiveData = MutableLiveData<UseCaseState<MovieDetailsResponse>>()
-    //val listDetailsLiveData: LiveData<UseCaseState<MovieDetailsResponse>> get() = listDetailsMutableLiveData
+    private val listDetailsMutableLiveData = MutableLiveData<MovieDetailsResponse>()
+    val listDetailsLiveData: LiveData<MovieDetailsResponse> get() = listDetailsMutableLiveData
 
     fun getMovieDetailsUseCaseState(movie_id:String) {
         viewModelScope.launch {
             getMovieDetailsUseCase.execute(movie_id).collect{
                when(it){
                    is UseCaseState.Success -> {
-                       listDetailsMutableLiveData.value = it
+                       listDetailsMutableLiveData.value = it.data!!
                    }
                    is UseCaseState.Error  -> {
                        Log.e(it.message, "")
@@ -33,5 +33,4 @@ class MovieDetailsViewModel  @Inject constructor(
             }
         }
     }
-
 }
